@@ -1,0 +1,85 @@
+1.Difference between http1.1 vs http 2?
+
+Imagine the internet as a bustling highway, and HTTP (Hypertext Transfer Protocol) as the traffic rules guiding data between your device and the web server. Now, let's explore the differences between two versions of this protocol, HTTP/1.1 and its faster sibling, HTTP/2, in a way that's easy to understand.
+
+1. Multiplexing: Handling Traffic Jams
+HTTP/1.1:
+One Lane at a Time: Think of HTTP/1.1 as a road where only one car (resource) can pass at a time.
+Traffic Delays: If one car is slow, the others wait in line. That's head-of-line blocking, causing delays.
+HTTP/2:
+Multiple Lanes: HTTP/2 introduces multiplexing, like having multiple lanes on a highway.
+No More Traffic Jams: Now, different cars (resources) can move independently, reducing wait times and speeding up the journey.
+2. Header Compression: Shrinking the Paperwork
+HTTP/1.1:
+Wordy Letters: In HTTP/1.1, headers (information about the data) are like wordy letters, making the communication a bit slow.
+HTTP/2:
+Compressed Notes: HTTP/2 compresses headers into shorter notes, like using abbreviations to make messages faster to send and receive.
+Faster Conversations: This helps in quicker communication between your browser and the server.
+3. Binary Protocol: Speaking the Computer's Language
+HTTP/1.1:
+Human Language: In HTTP/1.1, the conversation is in a language that humans can read, like a book.
+HTTP/2:
+Machine Code: HTTP/2 talks in a machine-friendly language, like a secret code between your device and the server.
+Speedy Translations: This binary format makes the conversation quicker and more efficient.
+4. Server Push: Predicting Your Needs
+HTTP/1.1:
+Ask and Receive: In HTTP/1.1, your device asks for each item, and the server responds.
+HTTP/2:
+Anticipating Needs: HTTP/2 allows the server to guess what your device needs next and sends it before you ask.
+Less Waiting Time: This anticipation reduces waiting time, making your web experience smoother.
+5. Prioritization: Putting First Things First
+HTTP/1.1:
+No Special Treatment: In HTTP/1.1, all resources are treated equally, like every car on the road.
+HTTP/2:
+VIP Treatment: HTTP/2 prioritizes important resources, ensuring they get special treatment and load first.
+Smooth Traffic Flow: This prioritization keeps things moving smoothly, giving you a faster and more enjoyable ride.
+
+2.Write a blog about objects and its internal representation in Javascript?
+
+JavaScript, a language known for its flexibility and dynamism, relies heavily on objects. These objects serve as the building blocks for data organization and manipulation. In this exploration, we'll dive into the internal representation of objects in JavaScript, unraveling the intricate details.
+
+1. Objects in JavaScript
+Definition: At its core, an object in JavaScript is a collection of key-value pairs, where each key is a string (or symbol) and each value can be any data type, including other objects.
+2. Internal Representation of Objects
+Memory Allocation:
+Dynamic Allocation: JavaScript objects are allocated memory dynamically on the heap, allowing for variable size and adaptability.
+Properties and Methods:
+Properties: These are variables associated with an object. They store information and can be of any data type.
+
+Methods: Functions attached to an object, methods allow the object to perform actions or provide specific functionality.
+
+Prototype Chain:
+Prototypes: Every JavaScript object has an associated prototype, a blueprint that defines shared properties and methods.
+
+Inheritance: Objects can inherit properties and methods from their prototype, forming a chain of prototypes.
+
+3. Creating Objects in JavaScript
+Object Literal:
+javascript
+Copy code
+const person = {
+  name: 'John',
+  age: 30,
+  greet: function() {
+    console.log('Hello, I am ' + this.name + '!');
+  }
+};
+Constructor Function:
+javascript
+Copy code
+function Animal(name, sound) {
+  this.name = name;
+  this.sound = sound;
+  this.makeSound = function() {
+    console.log(this.name + ' says ' + this.sound + '!');
+  };
+}
+
+const cat = new Animal('Whiskers', 'Meow');
+4. Object Prototypes
+Prototype Inheritance: JavaScript follows a prototype-based inheritance model, where objects can inherit properties and methods from their prototypes.
+
+Efficiency: This mechanism promotes efficiency by allowing multiple objects to share common functionality through prototypes.
+
+Conclusion
+Objects in JavaScript are not just data containers; they are dynamic entities with a rich internal structure. As you craft your code, understanding the memory allocation, properties, methods, and the prototype chain provides insights into how JavaScript objects work behind the scenes. Whether you choose object literals or constructor functions, the power of objects lies in their ability to encapsulate and organize data efficiently.
